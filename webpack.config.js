@@ -37,10 +37,15 @@ var config = {
         //入口起点(entry point)指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。
         //进入入口起点后，webpack 会找出有哪些模块和库是入口起点（直接和间接）依赖的。
         //每个依赖项随即被处理，最后输出到称之为 bundles 的文件中
-        'common'   : ['./src/page/common/index.js'],
-        'index'    : ['./src/page/index/index.js'],
-        'login'    : ['./src/page/login/index.js'],
-        'result'   : ['./src/page/result/index.js'],
+        'common'                : ['./src/page/common/index.js'],
+        'index'                 : ['./src/page/index/index.js'],
+        'user-login'            : ['./src/page/user-login/index.js'],
+        'user-register'         : ['./src/page/user-register/index.js'],  
+        'user-pass-reset'       : ['./src/page/user-pass-reset/index.js'], 
+        'user-center'           : ['./src/page/user-center/index.js'], 
+        'user-center-update'    : ['./src/page/user-center-update/index.js'],  
+        'user-pass-update'      : ['./src/page/user-pass-update/index.js'],                                                                                                                                                                                                                                
+        'result'                : ['./src/page/result/index.js'],
     },
     output: {
         //output 属性告诉 webpack 在哪里输出它所创建的 bundles，以及如何命名这些文件。
@@ -95,7 +100,12 @@ var config = {
         new ExtractTextPlugin('css/[name].css'),
         //html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
-        new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),   
+        new HtmlWebpackPlugin(getHtmlConfig('user-center','个人中心')),  
+        new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')), 
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),                                                                                                                         
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),        
     ]
 };

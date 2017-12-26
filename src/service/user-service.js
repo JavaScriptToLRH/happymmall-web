@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-17 17:04:32
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-24 17:11:19
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2017-12-25 16:58:50
 */
 
 'use strict';
@@ -13,7 +13,7 @@ var _user = {
     // 用户登录
     login : function(userInfo, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/user/login.do'),
+            url     : _mm.getServerUrl('/user/login.do'),//获取服务器地址
             data    : userInfo,
             method  : 'POST',
             success : resolve,

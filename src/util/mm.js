@@ -7,15 +7,16 @@ var conf = {
 var _mm = {
     //网络请求
     request : function(param){
-        var _this = this;
+        var _this = this; //存入mm对象
         $.ajax({
-            type      : param.method || 'get',
-            url       : param.url    || '',
-            dataType  : param.type   || 'json',
-            data      : param.data   || '',
+            type      : param.method || 'get',  //从param中取方法，如果没有默认get方法
+            url       : param.url    || '',     // 默认空
+            dataType  : param.type   || 'json', // 数据类型
+            data      : param.data   || '',     // 请求时需要的数据
             success   : function(res){
                 //请求成功
                 if(0 === res.status){
+                    //判断param.success是不是function，如果是，回调param.success，将数据进行传输
                     typeof param.success === 'function' && param.success(res.data, res.msg);
                 }
                 //没有登录状态，需要强制登录
@@ -39,12 +40,19 @@ var _mm = {
     //获取url参数
     getUrlParam : function(name){
         //happymmall.com/product/list?keyword=xxx&page=1
+        // 提取keyword步骤：1.截取?后参数；2.按&分开每一组keyword与value
+        // 定义正则表达式
         var reg    = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
         var result = window.location.search.substr(1).match(reg);
+        //window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面。
+        //window.location.search 从问号（?）开始的  URL（查询部分）
+        //substr()方法可在字符串中抽取从 start 下标开始的指定数目的字符。
+        //match() 方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。
         return result ? decodeURIComponent(result[2]) : null;
+        //decodeURIComponent() 函数可对 encodeURIComponent() 函数编码的 URI 进行解码。
     },
     //渲染HTML模板
-    renderHtml : function(htmlTemplate,data){
+    renderHtml : function(htmlTemplate,data){  // 传入模板和数据
         var template = Hogan.compile(htmlTemplate),
             result   = template.render(data);
         return result;
@@ -75,7 +83,7 @@ var _mm = {
     },
     //统一登录处理
     doLogin : function(){
-        window.location.href = './login.htnl?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome : function(){
         window.location.href = './index.html'
