@@ -36,9 +36,10 @@ var nav = {
     loadUserInfo : function(){
         _user.checkLogin(function(res){
             $('.user.not-login').hide().siblings('.user.login').show()
-                .find('.username').text(res.username);
+            .find('.username').text(res.username);
         }, function(errMsg){
             // do nothing
+            console.log(errMsg);
         });
     },
     // 加载购物车数量

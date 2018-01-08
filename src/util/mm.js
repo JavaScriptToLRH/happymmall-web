@@ -1,5 +1,5 @@
 'use strict';
-
+//模板渲染引擎Hogan
 var Hogan = require('hogan');
 var conf = {
     serverHost : ''
@@ -83,6 +83,7 @@ var _mm = {
     },
     //统一登录处理
     doLogin : function(){
+        //encodeURIComponent() 函数可把字符串作为 URI 组件进行编码
         window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome : function(){
