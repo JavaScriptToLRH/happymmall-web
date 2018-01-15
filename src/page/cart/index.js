@@ -158,8 +158,13 @@ var page = {
         });
     },
     // 数据匹配
+    // 设置notEmpty，对应到index.string中的notEmpty字段，如果notEmpty为true，即购物车中存在商品，如果为false，即购物车中不存在商品
     filter : function(data){
+        // console.log('data.cartProductVoList.length',data.cartProductVoList.length); //购物车中商品列表的长度
+        // console.log('!data.cartProductVoList.length',!data.cartProductVoList.length); //转换为bool值，长度不为0为false
+        // console.log('!!data.cartProductVoList.length',!!data.cartProductVoList.length); //因为存在长度应该为true，所以再次进行转换
         data.notEmpty = !!data.cartProductVoList.length;
+        // console.log('data.notEmpty',data.notEmpty);
     },
     // 显示错误信息
     showCartError : function(){

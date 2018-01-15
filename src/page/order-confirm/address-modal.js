@@ -6,8 +6,9 @@ var _address             = require('service/address-service.js');
 var templateAddressModal = require('./address-modal.string');
 
 var addressModal = {
+    // 地址编辑和添加弹窗的显示
     show : function(option){
-        // option的绑定
+        // option的绑定, 根据出入option判断，如果为对象，则this.option为对象，如果option为数组，则this.option为数组    
         this.option      = option;
         this.option.data = option.data || {};
         this.$modalWrap  = $('.modal-wrap');
@@ -52,7 +53,7 @@ var addressModal = {
                 _mm.errorTips(receiverInfo.errMsg || '好像哪里不对了');
             }
         });
-        // 保证点击modal内容区的时候，不关闭弹窗
+        // 保证点击modal内容区的时候，不关闭弹窗   阻止事件冒泡
         this.$modalWrap.find('.modal-container').click(function(e){
             e.stopPropagation();
         });
@@ -62,6 +63,8 @@ var addressModal = {
         });
     },
     loadModal : function(){
+        // console.log('isUpdate',this.option.isUpdate);
+        // isUpdate对应于address-modal.string，如果isUpdate为true,则编辑地址，如果isUpdate为false,则使用新地址
         var addressModalHtml = _mm.renderHtml(templateAddressModal, {
             isUpdate : this.option.isUpdate,
             data     : this.option.data
@@ -75,7 +78,7 @@ var addressModal = {
         var provinces        = _cities.getProvinces() || [],
             $provinceSelect  = this.$modalWrap.find('#receiver-province');
         $provinceSelect.html(this.getSelectOption(provinces));
-        // 如果是更新地址，并且有省份信息，做省份的回填
+        // 如果是更新地址，并且有省份信息，做省份的回填   receiverProvince为省份
         if(this.option.isUpdate && this.option.data.receiverProvince){
             $provinceSelect.val(this.option.data.receiverProvince);
             this.loadCities(this.option.data.receiverProvince);

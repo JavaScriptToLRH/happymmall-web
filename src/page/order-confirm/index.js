@@ -28,8 +28,8 @@ var page = {
         // 地址的选择
         $(document).on('click', '.address-item', function(){
             $(this).addClass('active').siblings('.address-item').removeClass('active');
+            // 存储当前选择的地址的id
             _this.data.selectedAddressId = $(this).data('id');
-
         });
         // 订单的提交
         $(document).on('click', '.order-submit', function(){
@@ -48,6 +48,7 @@ var page = {
         });
         // 地址的添加
         $(document).on('click', '.address-add', function(){
+            // isUpdate对应于address-modal.string，如果isUpdate为true,则编辑地址，如果isUpdate为false,则使用新地址
             addressModal.show({
                 isUpdate  : false,
                 onSuccess : function(){
@@ -98,6 +99,7 @@ var page = {
         });
     },
     // 处理地址列表中选中状态
+    // isActive对应于address-list.string，如果isActive为true，则为选中状态
     addressFilter : function(data){
         if(this.data.selectedAddressId){
             var selectedAddressIdFlag = false;
