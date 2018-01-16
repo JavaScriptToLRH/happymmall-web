@@ -17,6 +17,7 @@ var getHtmlConfig = function(name,title) {
     return {
         template : './src/view/' + name + '.html',//html模板路径
         filename : 'view/' + name + '.html',//生成的html存放路径，相对于path
+        favicon  : './favicon.ico',
         title    :title,
         inject   : true,//js插入的位置，true/'head'/'body'/false
                         // 注入选项。有四个选项值 true, body, head, false.
@@ -53,12 +54,13 @@ var config = {
         'user-center-update'    : ['./src/page/user-center-update/index.js'],  
         'user-pass-update'      : ['./src/page/user-pass-update/index.js'],                                                                                                                                                                                                                                
         'result'                : ['./src/page/result/index.js'],
+        'about'                 : ['./src/page/about/index.js'],
     },
     output: {
         //output 属性告诉 webpack 在哪里输出它所创建的 bundles，以及如何命名这些文件。
-        path: './dist',//输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
-        publicPath: '/dist',//模板、样式、脚本、图片等资源对应的server上的路径
-        filename: 'js/[name].js'//此选项决定了每个输出 bundle 的名称。这些 bundle 将写入到 output.path 选项指定的目录下。
+        path       : __dirname + '/dist/',//输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
+        publicPath : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',//模板、样式、脚本、图片等资源对应的server上的路径
+        filename   : 'js/[name].js'//此选项决定了每个输出 bundle 的名称。这些 bundle 将写入到 output.path 选项指定的目录下。
     },
     externals: {
         //防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖
@@ -79,6 +81,10 @@ var config = {
             { 
                 test: /\.string$/, //条件，会匹配test
                 loader: 'html-loader', 
+                query : {
+                    minimize : true,
+                    removeAttributeQuotes : false,
+                }
             },
         ]
     },
@@ -121,6 +127,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')), 
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),                                                                                                                         
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),        
+        new HtmlWebpackPlugin(getHtmlConfig('about','关于MMALL')),        
     ]
 };
 
