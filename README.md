@@ -35,21 +35,17 @@ http://localhost:8089/manage/*      Form-->To   http://test.happymmall.com:80/ma
 http://localhost:8089/user/*        Form-->To   http://test.happymmall.com:80/user/
 
 
+其它(作者： Geely;链接：https://www.imooc.com/article/19088;来源：慕课网)
+
 HappyMMall数据接口：https://gitee.com/imooccode/happymmallwiki/wikis/Home
 
 Happymmall线上测试环境：https://www.imooc.com/article/19088
 
-其它：
-┃
-┃━   前台域名：http://test.happymmall.com 
-┃
-┃━   后台域名：http://admintest.happymmall.com 
-┃
-┃━   管理员登录的账号是：admin     
-┃
-┃━   管理员登录的密码是：admin                   
-┃
-┃━   作者： Geely                       　      
-┃━   链接：https://www.imooc.com/article/19088  
-┗━   来源：慕课网                               
+前台域名：http://test.happymmall.com 
+
+后台域名：http://admintest.happymmall.com 
+
+管理员登录的账号是：admin     
+
+管理员登录的密码是：admin                                                
 
