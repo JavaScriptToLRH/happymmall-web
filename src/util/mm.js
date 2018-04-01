@@ -1,6 +1,6 @@
 'use strict';
 //模板渲染引擎Hogan
-var Hogan = require('hogan');
+var Hogan = require('hogan.js');
 var conf = {
     serverHost : ''
 }
