@@ -21,11 +21,17 @@ Charles代理设置：
 打开Charles代理工具 --> Tools --> Map Remote
 
 http://localhost:8089/cart/*        Form-->To   http://test.happymmall.com:80/cart/
+
 http://localhost:8089/user/*        Form-->To   http://test.happymmall.com:80/user/
+
 http://localhost:8089/product/*     Form-->To   http://test.happymmall.com:80/product/
+
 http://localhost:8089/shipping/*    Form-->To   http://test.happymmall.com:80/shipping/
+
 http://localhost:8089/order/*       Form-->To   http://test.happymmall.com:80/order/
+
 http://localhost:8089/manage/*      Form-->To   http://test.happymmall.com:80/manage/
+
 http://localhost:8089/user/*        Form-->To   http://test.happymmall.com:80/user/
 
 
@@ -34,13 +40,16 @@ HappyMMall数据接口：https://gitee.com/imooccode/happymmallwiki/wikis/Home
 Happymmall线上测试环境：https://www.imooc.com/article/19088
 
 其它：
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃    前台域名：http://test.happymmall.com       ┃
-┃    后台域名：http://admintest.happymmall.com  ┃
-┃    管理员登录的账号是：admin                   ┃
-┃    管理员登录的密码是：admin                   ┃
-┃                                              ┃
-┃    作者： Geely                       　      ┃
-┃    链接：https://www.imooc.com/article/19088  ┃
-┃    来源：慕课网                               ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┃
+┃━   前台域名：http://test.happymmall.com 
+┃
+┃━   后台域名：http://admintest.happymmall.com 
+┃
+┃━   管理员登录的账号是：admin     
+┃
+┃━   管理员登录的密码是：admin                   
+┃
+┃━   作者： Geely                       　      
+┃━   链接：https://www.imooc.com/article/19088  
+┗━   来源：慕课网                               
+
