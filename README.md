@@ -1,4 +1,4 @@
-项目初始化步骤
+一、项目初始化步骤
 
 1.安装nodejs环境，node.js中文官网 : https://nodejs.org/zh-cn/
 
@@ -16,7 +16,7 @@
 7.开发模式下预览项目 访问：http://localhost:8089/dist/view/index.html
 
 
-Charles代理设置：
+二、Charles代理设置：
 
 打开Charles代理工具 --> Tools --> Map Remote
 
@@ -35,7 +35,7 @@ http://localhost:8089/manage/*      Form-->To   http://test.happymmall.com:80/ma
 http://localhost:8089/user/*        Form-->To   http://test.happymmall.com:80/user/
 
 
-其它(作者： Geely;链接：https://www.imooc.com/article/19088;来源：慕课网)
+三、其它(作者：Geely，链接：https://www.imooc.com/article/19088，来源：慕课网)
 
 HappyMMall数据接口：https://gitee.com/imooccode/happymmallwiki/wikis/Home
 
