@@ -27,7 +27,7 @@ var page = {
         var _this = this;
         // 图片预览
         $(document).on('mouseenter', '.p-img-item', function(){
-            var imageUrl = $(this).find('p-img').attr('src');
+            var imageUrl = $(this).find('.p-img').attr('src');
             $('.main-img').attr('src', imageUrl); 
         });
         // count操作
