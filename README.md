@@ -23,19 +23,19 @@
 打开Charles代理工具，在选项卡中选择: `Tools --> Map Remote`
 
 ``` text
-  http://localhost:8089/cart/*        Form-->To   http://test.happymmall.com:80/cart/
+  http://localhost:8089/cart/*       Form-->To   http://test.happymmall.com:80/cart/
 
-  http://localhost:8089/user/*        Form-->To   http://test.happymmall.com:80/user/
+  http://localhost:8089/user/*       Form-->To   http://test.happymmall.com:80/user/
 
-  http://localhost:8089/product/*     Form-->To   http://test.happymmall.com:80/product/
+  http://localhost:8089/product/*    Form-->To   http://test.happymmall.com:80/product/
 
-  http://localhost:8089/shipping/*    Form-->To   http://test.happymmall.com:80/shipping/
+  http://localhost:8089/shipping/*   Form-->To   http://test.happymmall.com:80/shipping/
 
-  http://localhost:8089/order/*       Form-->To   http://test.happymmall.com:80/order/
+  http://localhost:8089/order/*      Form-->To   http://test.happymmall.com:80/order/
 
-  http://localhost:8089/manage/*      Form-->To   http://test.happymmall.com:80/manage/
+  http://localhost:8089/manage/*     Form-->To   http://test.happymmall.com:80/manage/
 
-  http://localhost:8089/user/*        Form-->To   http://test.happymmall.com:80/user/
+  http://localhost:8089/user/*       Form-->To   http://test.happymmall.com:80/user/
 ```
 
 ### 2.3 其它
@@ -53,3 +53,7 @@
 链接：https://www.imooc.com/article/19088
 来源：慕课网
 ```
+
+## 3. 项目备注
+
+## 4. 项目展示
