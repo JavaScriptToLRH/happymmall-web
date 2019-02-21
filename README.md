@@ -37,9 +37,9 @@
 
   解决办法：使用 4.0 beta 版，npm install --save-dev extract-text-webpack-plugin@next
 
-+ webpack多页应用配置，参考[webpack.config.js](./webpack.config.js)
++ webpack多页应用配置，参考 [webpack.config.js](./webpack.config.js)
 + webpack升级4.x升级配置，参考 [小记webpack4.x升级过程](http://www.imooc.com/t/198337)
-+ webpack1.15.0多页面配置，参考[webpack.config.old.js](./webpack.config.old.js)
++ webpack1.15.0多页面配置，参考 [webpack.config.old.js](./webpack.config.old.js)
 
 ## 4. 项目展示
 
